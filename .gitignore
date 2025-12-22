@@ -1,0 +1,9 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+
+# OS junk
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+@TokenFlow_API_MS_HostAddress = http://localhost:5175
+
+GET {{TokenFlow_API_MS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
