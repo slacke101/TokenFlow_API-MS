@@ -10,6 +10,8 @@
 
 > Tokens track **work progress**, not employee performance, ensuring ethical and transparent workflow management.
 
+<img width="1536" height="1024" alt="ChatGPT Image Dec 22, 2025, 03_22_00 AM" src="https://github.com/user-attachments/assets/f64004e5-2b51-496d-a2df-59d7256b99ab" />
+
 ---
 
 ## Features
@@ -27,3 +29,4 @@
 
 ### Token Lifecycle Diagram
 
+![TokenFlowDiagram](https://github.com/user-attachments/assets/bb68da03-61e6-486d-b242-4ba8e2d80e64)
