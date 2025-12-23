@@ -1,34 +1,33 @@
 
+using TokenFlow_API_MS;
+using System;
+using TokenFlow_API_MS.Models;
+
 namespace TokenFlow_API_MS
 {
     public class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
+            // create a work token 
+            WorkToken myToken = new WorkToken(
+                tokenName: "Complete WorkToken Model",
+                tokenInfo: "Ensure that the work token model for our TokenFlow system is completed using C# ASP.NET Core",
+                tokenType: "Task",
+                createdBy: "Rafael A Castro",
+                dueDate: new DateTime(2025, 12, 30, 12, 0, 0)
+                
+             );
 
-            // Add services to the container.
-
-            builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.MapOpenApi();
-            }
-
-            app.UseHttpsRedirection();
-
-            app.UseAuthorization();
-
-
-            app.MapControllers();
-
-            app.Run();
+            Console.WriteLine($"Token ID: {myToken.tokenID}");
+            Console.WriteLine($"Created At: {myToken.createdAt}");
+            Console.WriteLine($"Name: {myToken.tokenName}");
+            Console.WriteLine($"Info: {myToken.tokenInfo}");
+            Console.WriteLine($"Task Type: {myToken.tokenType}");
+            Console.WriteLine($"Created By: {myToken.createdBy}");
+            Console.WriteLine($"Priority: {myToken.Priority}");
+            Console.WriteLine($"Due Date: {myToken.dueDate}");
         }
+
     }
 }
