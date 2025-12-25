@@ -1,6 +1,6 @@
 ﻿namespace TokenFlow_API_MS.Services
 {
-    public class AuditEntry
+    public class AuditService
     {
     }
 }

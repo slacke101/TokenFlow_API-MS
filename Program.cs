@@ -1,18 +1,20 @@
 
 using TokenFlow_API_MS;
 using System;
-using TokenFlow_API_MS.Models;
+using TokenFlow_API_MS.Models; // project name + directory (models)
 
 namespace TokenFlow_API_MS
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // 
         {
-            // create a work token 
-            WorkToken myToken = new WorkToken(
+            // create a work token INSTANTIATE 
+            WorkToken myToken = new WorkToken(                // always use the name of class and give the instantiate a name in this case myToken and create a new token using "new"
                 tokenName: "Complete WorkToken Model",
-                tokenInfo: "Ensure that the work token model for our TokenFlow system is completed using C# ASP.NET Core",
+                tokenInfo: "Finish onboarding for the follwing:" +
+                "Jaileen Hirales, Brawley CA 92227" +
+                "Lariza Lopez, Denver CO 95857",
                 tokenType: "Task",
                 createdBy: "Rafael A Castro",
                 dueDate: new DateTime(2025, 12, 30, 12, 0, 0)
@@ -31,3 +33,7 @@ namespace TokenFlow_API_MS
 
     }
 }
+
+
+
+
