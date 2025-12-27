@@ -74,7 +74,8 @@ namespace TokenFlow_API_MS.Models
         public void updateState(TokenState newState)
 
         {
-
+            if (newState != null)
+                return;
         }
 
 

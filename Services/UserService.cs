@@ -1,4 +1,4 @@
-﻿namespace TokenFlow_API_MS.GraphAPI
+﻿namespace TokenFlow_API_MS.Services
 {
     public class UserService
     {
