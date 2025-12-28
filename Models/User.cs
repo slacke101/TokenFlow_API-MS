@@ -1,4 +1,4 @@
-﻿using TokenFlow_API_MS.Models; 
+﻿using TokenFlow_API_MS.Models;
 
 namespace TokenFlow_API_MS.Models
 {
@@ -10,8 +10,17 @@ namespace TokenFlow_API_MS.Models
         public List<WorkToken> currentTokens { get; private set; }
 
 
-    }
 
+
+
+        public void removeUser(string name)
+        {
+
+
+        }
+
+
+    }
 
 
 }

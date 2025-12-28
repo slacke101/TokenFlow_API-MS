@@ -18,7 +18,7 @@ namespace TokenFlow_API_MS.Models
         public string? tokenType { get; private set; } // FIELD
         public string? tokenInfo { get; private set; } // FIELD 
         public User? AssignedUser { get; private set; }
-        public TokenState currentState { get; private set; } = TokenState.Draft;
+        public TokenState currentState { get; private set; }
 
         public string? createdBy { get; private set; } // FIELD
         public string Priority { get; private set; } = "Medium";  //FIELD
@@ -55,8 +55,6 @@ namespace TokenFlow_API_MS.Models
             {
                 return;
             }
-
-
             if (AssignedUser != null)
             {
                 return;
@@ -65,8 +63,6 @@ namespace TokenFlow_API_MS.Models
             AssignedUser = user;
 
         }
-        
-        
 
 
         // method for updateState
@@ -77,7 +73,6 @@ namespace TokenFlow_API_MS.Models
             if (newState != null)
                 return;
         }
-
 
     }
 }
