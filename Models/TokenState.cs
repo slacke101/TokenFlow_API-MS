@@ -2,7 +2,8 @@
 {
     public enum tokenState
     {
-        Draft,      // task draft
+        Draft,
+        Assigned,// task draft
         In_Progress, // in-progress state
         Pending, // pending state
         Approved, // approved state

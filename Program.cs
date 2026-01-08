@@ -22,22 +22,22 @@ namespace TokenFlow_API_MS
         {
             // create a work token INSTANTIATE 
             WorkToken myToken = new WorkToken(                // always use the name of class and give the instantiate a name in this case myToken and create a new token using "new"
-                tokenName: "Complete WorkToken Model",
-                tokenInfo: "Finish onboarding for the follwing",
-                tokenType: "Task",
-                createdBy: "Rafael A Castro",
-                dueDate: new DateTime(2025, 12, 30, 12, 0, 0)
-                
-             );
+                TokenName: "Complete WorkToken Model",
+                TokenInfo: "Finish onboarding for the follwing",
+                TokenType: "Task",
+                CreatedBy: "Rafael A Castro",
+                DueDate: new DateTime(2025, 12, 30, 12, 0, 0)
 
-            Console.WriteLine($"Token ID: {myToken.tokenID}");
-            Console.WriteLine($"Created At: {myToken.createdAt}");
-            Console.WriteLine($"Name: {myToken.tokenName}");
-            Console.WriteLine($"Info: {myToken.tokenInfo}");
-            Console.WriteLine($"Task Type: {myToken.tokenType}");
-            Console.WriteLine($"Created By: {myToken.createdBy}");
+            );
+
+            Console.WriteLine($"Token ID: {myToken.TokenID}");
+            Console.WriteLine($"Created At: {myToken.CreatedAt}");
+            Console.WriteLine($"Name: {myToken.TokenName}");
+            Console.WriteLine($"Info: {myToken.TokenInfo}");
+            Console.WriteLine($"Task Type: {myToken.TokenType}");
+            Console.WriteLine($"Created By: {myToken.CreatedBy}");
             Console.WriteLine($"Priority: {myToken.Priority}");
-            Console.WriteLine($"Due Date: {myToken.dueDate}");
+            Console.WriteLine($"Due Date: {myToken.DueDate}");
         }
 
     }
