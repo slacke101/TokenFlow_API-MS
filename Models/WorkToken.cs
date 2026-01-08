@@ -53,11 +53,11 @@ namespace TokenFlow_API_MS.Models
         {
             if (user == null)
             {
-                return;
+                throw new ArgumentNullException(nameof(user));
             }
             if (AssignedUser != null)
             {
-                return;
+                throw new InvalidOperationException("Token has already been assigned.");
             }
 
             AssignedUser = user;
