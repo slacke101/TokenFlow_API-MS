@@ -12,36 +12,36 @@ namespace TokenFlow_API_MS.Models
 
         // CLASS MEMBERS INSIDE WORKTOKEN CLASS // 
 
-        public Guid tokenID { get; }  // guid is part of the overall system for randomized id generation. // FIELD
-        public DateTime createdAt { get; } // FIELD
-        public string? tokenName { get; private set; } // FIELD
-        public string? tokenType { get; private set; } // FIELD
-        public string? tokenInfo { get; private set; } // FIELD 
+        public Guid TokenID { get; }  // guid is part of the overall system for randomized id generation. // FIELD
+        public DateTime CreatedAt { get; } // FIELD
+        public string? TokenName { get; private set; } // FIELD
+        public string? TokenType { get; private set; } // FIELD
+        public string? TokenInfo { get; private set; } // FIELD 
         public User? AssignedUser { get; private set; }
-        public TokenState currentState { get; private set; }
+        public TokenState CurrentState { get; private set; }
 
-        public string? createdBy { get; private set; } // FIELD
+        public string? CreatedBy { get; private set; } // FIELD
         public string Priority { get; private set; } = "Medium";  //FIELD
-        public DateTime dueDate { get; private set; }
+        public DateTime DueDate { get; private set; }
 
         // public TokenState currentState { get; private set; } = TokenState.Draft;        
 
 
         // constructor to set token details automatically when created 
 
-        public WorkToken(string? tokenName, string? tokenInfo, string? tokenType, string? createdBy, DateTime? dueDate = null)  // data details set once token is created , note tokenID & createdAt are not present in the parameters as they are automatically crated by generation and by user.
+        public WorkToken(string? TokenName, string? TokenInfo, string? TokenType, string? CreatedBy, DateTime? DueDate = null)  // data details set once token is created , note tokenID & createdAt are not present in the parameters as they are automatically crated by generation and by user.
         {
-            if (tokenName == null)
-                tokenID = Guid.Empty;
+            if (TokenName == null)
+                TokenID = Guid.Empty;
 
 
-            this.tokenID = Guid.NewGuid(); // here Guid is used to generate a unique ID
-            this.tokenName = tokenName; // name of the token (ex. = " Finish New Hire Onboarding Feb")
-            this.tokenInfo = tokenInfo; // holds the information of token "task"
-            this.tokenType = tokenType; // tells user token type "task" or "request"
-            this.createdAt = DateTime.UtcNow; // timestamp for token creation
-            this.createdBy = createdBy; // displays creator of token
-            this.dueDate = dueDate ?? DateTime.UtcNow; // uses passed value, fallback to now
+            this.TokenID = Guid.NewGuid(); // here Guid is used to generate a unique ID
+            this.TokenName = TokenName; // name of the token (ex. = " Finish New Hire Onboarding Feb")
+            this.TokenInfo = TokenInfo; // holds the information of token "task"
+            this.TokenType = TokenType; // tells user token type "task" or "request"
+            this.CreatedAt = DateTime.UtcNow; // timestamp for token creation
+            this.CreatedBy = CreatedBy; // displays creator of token
+            this.DueDate = DueDate ?? DateTime.UtcNow; // uses passed value, fallback to now
 
 
 
@@ -49,7 +49,7 @@ namespace TokenFlow_API_MS.Models
 
         // method for assignToken
 
-        public void assignUser(User user)
+        public void AssignUser(User user)
         {
             if (user == null)
             {
@@ -67,10 +67,10 @@ namespace TokenFlow_API_MS.Models
 
         // method for updateState
 
-        public void updateState(TokenState newState)
+        public void UpdateState(TokenState NewState)
 
         {
-            if (newState != null)
+            if (NewState != null)
                 return;
         }
 

@@ -13,9 +13,15 @@ namespace TokenFlow_API_MS.Models
 
 
 
-        public void removeUser(string name)
+        public void RemoveUser(string name)
         {
 
+
+
+        }
+
+        public void ReAssignUser(string name)
+        {
 
         }
 
