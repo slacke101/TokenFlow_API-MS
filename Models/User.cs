@@ -4,10 +4,11 @@ namespace TokenFlow_API_MS.Models
 {
     public class User
     {
-        public string userID { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public List<WorkToken> currentTokens { get; private set; }
+        public string UserID { get; private set; }
+        public string Name { get; private set; }
+        public string Email { get; private set; }
+        public List<WorkToken> CurrentTokens { get; private set; }
+
 
 
 
