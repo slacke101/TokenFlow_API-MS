@@ -51,12 +51,13 @@ namespace TokenFlow_API_MS.Models
 
         public void AssignUser(User user)
         {
-            if (user == null) throw new ArgumentNullException(nameof(user));   // exception if the user is null
-            if (AssignedUser != null) throw new InvalidOperationException("Token has already been assigned.");
-
+            if (user == null)
+                throw new ArgumentNullException(nameof(user));
+            if (AssignedUser != null)
+                throw new InvalidOperationException("Token has already been assigned.");
 
             AssignedUser = user;
-
+            user.AddToken(this);
         }
 
 
@@ -66,6 +67,7 @@ namespace TokenFlow_API_MS.Models
 
         {
             CurrentState = NewState;
+
         }
 
     }
