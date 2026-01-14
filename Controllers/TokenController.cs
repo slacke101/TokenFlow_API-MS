@@ -15,14 +15,14 @@ namespace TokenFlow_API_MS.Controllers
             _tokenService = tokenService;
         }
 
-        [HttpGet]
+        [HttpGet]  // GET all tokens for users
         public IActionResult GetAll()
         {
             var tokens = _tokenService.GetAll();
             return Ok(tokens);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")]  // GET token by specific GUID 
         public IActionResult Get(Guid id)
         {
             var token = _tokenService.Get(id);
