@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using TokenFlow_API_MS.Models
 
 
 //TO DEVELOPERS: A TOKEN IN THIS CASE IS A VIRTUAL WORK TICKET WHICH CONTAINS A GUID, TICKTE INFORMATION, DUE DATE, ETC. // 
@@ -67,6 +68,13 @@ namespace TokenFlow_API_MS.Models
 
         {
             CurrentState = NewState;
+            if (NewState
+
+        }
+
+        public void MaxToken(WorkToken workToken)
+        {
+            if (workToken !=
 
         }
 
