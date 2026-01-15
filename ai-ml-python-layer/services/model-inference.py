@@ -5,7 +5,7 @@
 
 # function to determine priority
 def priority_determination():
-    pass
+    
 
 
 # function to estimate task complexity
@@ -17,11 +17,11 @@ def task_complexity_estimation():
 
 # function to estimate completion time
 def task_completion_estimation():
-    pass
+    passW
 
 
 # function to recommend which user should take the task
-def tasK_recommender():
+def task_recommender():
     pass
 
 

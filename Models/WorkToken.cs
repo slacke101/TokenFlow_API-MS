@@ -74,7 +74,7 @@ namespace TokenFlow_API_MS.Models
 
         public void MaxToken(WorkToken workToken)
         {
-            if (workToken !=
+
 
         }
 
